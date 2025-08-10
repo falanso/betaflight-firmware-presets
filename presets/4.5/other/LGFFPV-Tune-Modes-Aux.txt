@@ -1,3 +1,10 @@
+#$ TITLE: LGFFPV Tune modes(aux) HD
+#$ FIRMWARE_VERSION: 4.5
+#$ CATEGORY: other
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: modes, aux, ELRS, GPS, FS, Beep
+#$ AUTHOR: LetsGoFlyFpv
+
 # aux
 aux 0 0 0 1700 2100 0 0
 aux 1 1 2 1800 2100 0 0
