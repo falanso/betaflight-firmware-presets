@@ -138,7 +138,8 @@
     ],
     "category": [
       "OSD",
-      "OTHER"
+      "OTHER",
+      "RATES"
     ],
     "author": [
       "LetsGoFlyFpv"
@@ -146,15 +147,22 @@
     "keywords": [
       "aux",
       "Beep",
+      "cinematic",
       "custom",
       "dynamic",
       "ELRS",
       "fpv",
+      "freestyle",
       "FS",
       "GPS",
+      "indoor",
       "layout",
+      "LGFFPV",
       "modes",
       "OSD",
+      "outdoor",
+      "rateprofile",
+      "rates",
       "warnings"
     ]
   },
@@ -221,6 +229,28 @@
       ],
       "author": "LetsGoFlyFpv",
       "priority": 0
+    },
+    {
+      "fullPath": "presets/4.5/rates/LGFFPV-Rates.txt",
+      "hash": "b66338283f007f4df1749a783b516b0f1b284cc9866b0d1d5fe7dad3243dc30d",
+      "title": "LGFFPV Falanso's Custom Rate Profiles",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "RATES",
+      "status": "COMMUNITY",
+      "keywords": [
+        "LGFFPV",
+        "rates",
+        "rateprofile",
+        "freestyle",
+        "cinematic",
+        "indoor",
+        "outdoor"
+      ],
+      "author": "LetsGoFlyFpv",
+      "force_options_review": true,
+      "priority": 10000
     }
   ]
 }
