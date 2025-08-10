@@ -11,8 +11,8 @@
 #$ DESCRIPTION: WARNING: Please select ONLY ONE of the ELRS Rate options below.
 #$ FORCE_OPTIONS_REVIEW: TRUE
 
---- Base OSD Configuration ---
-These settings will be applied to all configurations. GPS and Link Warning elements are off by default.
+# --- Base OSD Configuration ---
+# These settings will be applied to all configurations. GPS and Link Warning elements are off by default.
 set osd_warn_bitmask = 458751
 set osd_cap_alarm = 4000
 set osd_alt_alarm = 120
@@ -87,33 +87,33 @@ set osd_compass_bar_pos = 41
 set osd_altitude_pos = 2081
 #$ OPTION END
 
---- ELRS Link Warning Options (SELECT ONLY ONE) ---
+# --- ELRS Link Warning Options (SELECT ONLY ONE) ---
 #$ OPTION BEGIN (UNCHECKED): ELRS 50Hz Warnings
 # -- ADDER: For Long Range --
-set osd_warn_lq_value = 3 # Warn at 70% LQ
+set osd_link_quality_alarm = 70 # Warn at 70% LQ
 set osd_rssi_dbm_alarm = -105
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): ELRS 150Hz Warnings
 # -- ADDER: For Long Range --
-set osd_warn_lq_value = 3 # Warn at 70% LQ
+set osd_link_quality_alarm = 70 # Warn at 70% LQ
 set osd_rssi_dbm_alarm = -102
 #$ OPTION END
 
 #$ OPTION BEGIN (CHECKED): ELRS 250Hz Warnings
 # -- ADDER: For Standard / Default --
-set osd_warn_lq_value = 2 # Warn at 80% LQ
+set osd_link_quality_alarm = 80 Warn at 80% LQ
 set osd_rssi_dbm_alarm = -98
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): ELRS 500Hz Warnings
 # -- ADDER: For Racing --
-set osd_warn_lq_value = 1 # Warn at 90% LQ
+set osd_link_quality_alarm = 80  # Warn at 90% LQ
 set osd_rssi_dbm_alarm = -95
 #$ OPTION END
 
 #$ OPTION BEGIN (UNCHECKED): ELRS 1000Hz Warnings
 # -- ADDER: For Racing --
-set osd_warn_lq_value = 1 # Warn at 90% LQ
+set osd_link_quality_alarm = 90 # Warn at 90% LQ
 set osd_rssi_dbm_alarm = -90
 #$ OPTION END

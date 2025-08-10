@@ -161,7 +161,7 @@
   "presets": [
     {
       "fullPath": "presets/4.5/osd/LGFFPV-OSD-HD-GPS-script.txt",
-      "hash": "f5c4dcd308eabfd02008bc0413a5b58a6db3f754322be4485d8088c47760c166",
+      "hash": "e92243b40ca4a003dba6b08f62a7ffe89b3e25606536e760076b1392b276cc98",
       "title": "LGFFPV-OSD-HD-GPS-script OSD with Dynamic ELRS Warnings",
       "firmware_version": [
         "4.5"
