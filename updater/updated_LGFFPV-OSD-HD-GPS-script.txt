@@ -1,0 +1,119 @@
+#$ TITLE: LGFFPV-OSD-HD-GPS-script OSD with Dynamic ELRS Warnings
+#$ FIRMWARE_VERSION: 4.5
+#$ CATEGORY: OSD
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: OSD, layout, ELRS, GPS, warnings, dynamic, custom, fpv
+#$ AUTHOR: LetsGoFlyFpv
+
+#$ DESCRIPTION: A complete OSD layout with dynamic warnings for ExpressLRS packet rates.
+#$ DESCRIPTION: Provides options to enable or disable GPS elements for a cleaner display.
+#$ DESCRIPTION: WARNING: OSD element positions are optimized for a 4:3 aspect ratio. You may need to adjust positions for 16:9 displays.
+#$ DESCRIPTION: WARNING: Please select ONLY ONE of the ELRS Rate options below.
+#$ FORCE_OPTIONS_REVIEW: TRUE
+
+# --- Base OSD Configuration ---
+# These settings will be applied to all configurations. GPS and Link Warning elements are off by default.
+set osd_warn_bitmask = 458751
+set osd_cap_alarm = 3840
+set osd_alt_alarm = 120
+set osd_vbat_pos = 1070
+set osd_rssi_pos = 226
+set osd_link_quality_pos = 3689
+set osd_link_tx_power_pos = 234
+set osd_rssi_dbm_pos = 3625
+set osd_tim_1_pos = 386
+set osd_tim_2_pos = 3342
+set osd_remaining_time_estimate_pos = 3374
+set osd_flymode_pos = 3120
+set osd_anti_gravity_pos = 234
+set osd_g_force_pos = 234
+set osd_throttle_pos = 2561
+set osd_vtx_channel_pos = 0
+set osd_crosshairs_pos = 2361
+set osd_ah_sbar_pos = 206
+set osd_ah_pos = 6330
+set osd_current_pos = 6661
+set osd_mah_drawn_pos = 3683
+set osd_motor_diag_pos = 234
+set osd_craft_name_pos = 3084
+set osd_pilot_name_pos = 1026
+set osd_pid_roll_pos = 234
+set osd_pid_pitch_pos = 234
+set osd_pid_yaw_pos = 234
+set osd_debug_pos = 234
+set osd_power_pos = 234
+set osd_pidrate_profile_pos = 234
+set osd_warnings_pos = 2421
+set osd_avg_cell_voltage_pos = 7715
+set osd_pit_ang_pos = 97
+set osd_rol_ang_pos = 65
+set osd_battery_usage_pos = 40
+set osd_disarmed_pos = 267
+set osd_nheading_pos = 234
+set osd_up_down_reference_pos = 205
+set osd_ready_mode_pos = 2168
+set osd_nvario_pos = 164
+set osd_esc_tmp_pos = 163
+set osd_esc_rpm_pos = 150
+set osd_esc_rpm_freq_pos = 234
+set osd_rtc_date_time_pos = 2049
+set osd_adjustment_range_pos = 234
+set osd_flip_arrow_pos = 2074
+set osd_core_temp_pos = 278
+set osd_log_status_pos = 2070
+set osd_stick_overlay_left_pos = 234
+set osd_stick_overlay_right_pos = 234
+set osd_rate_profile_name_pos = 234
+set osd_pid_profile_name_pos = 234
+set osd_profile_name_pos = 234
+set osd_rcchannels_pos = 234
+set osd_camera_frame_pos = 35
+set osd_efficiency_pos = 234
+set osd_total_flights_pos = 234
+set osd_sys_bitrate_pos = 270
+set osd_stat_bitmask = 14252
+set osd_displayport_device = AUTO
+
+#$ OPTION BEGIN (CHECKED): Show GPS OSD Elements
+# -- ADDER: Enable to show all GPS-related elements on the OSD --
+set osd_gps_speed_pos = 3078
+set osd_gps_lon_pos = 2657
+set osd_gps_lat_pos = 2625
+set osd_gps_sats_pos = 2593
+set osd_home_dir_pos = 2650
+set osd_home_dist_pos = 2682
+set osd_flight_dist_pos = 2598
+set osd_compass_bar_pos = 41
+set osd_altitude_pos = 2081
+#$ OPTION END
+
+# --- ELRS Link Warning Options (SELECT ONLY ONE) ---
+#$ OPTION BEGIN (UNCHECKED): ELRS 50Hz Warnings
+# -- ADDER: For Long Range --
+set osd_link_quality_alarm = 70 # Warn at 70% LQ
+set osd_rssi_dbm_alarm = -105
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): ELRS 150Hz Warnings
+# -- ADDER: For Long Range --
+set osd_link_quality_alarm = 70 # Warn at 70% LQ
+set osd_rssi_dbm_alarm = -105
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): ELRS 250Hz Warnings
+# -- ADDER: For Standard / Default --
+set osd_link_quality_alarm = 70 Warn at 80% LQ
+set osd_rssi_dbm_alarm = -105
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): ELRS 500Hz Warnings
+# -- ADDER: For Racing --
+set osd_link_quality_alarm = 70  # Warn at 90% LQ
+set osd_rssi_dbm_alarm = -105
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): ELRS 1000Hz Warnings
+# -- ADDER: For Racing --
+set osd_link_quality_alarm = 70 # Warn at 90% LQ
+set osd_rssi_dbm_alarm = -105
+#$ OPTION END
